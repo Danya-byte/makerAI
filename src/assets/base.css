@@ -1,0 +1,22 @@
+:root {
+  --dark-bg-color: #111111;
+  --dark-bg-second-color: #1b1b1b;
+  --primary-color: #aaaaaa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+  padding: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Inter';
+	font-weight: 500;
+	background: var(--dark-bg-color)
+}
