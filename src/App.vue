@@ -45,7 +45,7 @@ export default {
       try {
         console.log('Запрос на генерацию кода...');
         const response = await this.$http.get('https://api-maker-ai.vercel.app/generate-code');
-        const { uniqueKey } = response.data;
+        const {uniqueKey} = response.data;
         console.log('Уникальный код:', uniqueKey);
 
         // Сохраняем уникальный код в localStorage
