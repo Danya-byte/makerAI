@@ -44,7 +44,7 @@ export default {
       try {
         // Запрашиваем уникальный код у бэкенда
         const response = await this.$http.get('https://api-maker-ai.vercel.app/generate-code');
-        const {uniqueKey} = response.data;
+        const { uniqueKey } = response.data;
 
         // Сохраняем уникальный код в localStorage
         localStorage.setItem('uniqueKey', uniqueKey);
@@ -114,4 +114,3 @@ button:hover:not(:disabled) {
   font-size: 16px;
 }
 </style>
-
