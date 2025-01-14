@@ -24,6 +24,7 @@ export default {
     if (uniqueKey) {
       // Если код есть, проверяем статус авторизации
       try {
+        console.log('Проверка авторизации...');
         const response = await this.$http.get(`https://api-maker-ai.vercel.app/init?uniqueKey=${uniqueKey}`);
         this.showModal = !response.data.authorized;
       } catch (error) {
@@ -42,9 +43,10 @@ export default {
       this.errorMessage = ''; // Сбрасываем сообщение об ошибке
 
       try {
-        // Запрашиваем уникальный код у бэкенда
+        console.log('Запрос на генерацию кода...');
         const response = await this.$http.get('https://api-maker-ai.vercel.app/generate-code');
         const { uniqueKey } = response.data;
+        console.log('Уникальный код:', uniqueKey);
 
         // Сохраняем уникальный код в localStorage
         localStorage.setItem('uniqueKey', uniqueKey);
